@@ -10,6 +10,10 @@
 #include "freertos/FreeRTOS.h"
 #include "driver/i2s.h"
 
+// bitcoin
+#define MODULE_SECP256K1_ENABLED    (1)
+#define MODULE_HASHLIB_ENABLED      (1)
+
 // object representation and NLR handling
 #define MICROPY_OBJ_REPR                    (MICROPY_OBJ_REPR_A)
 #define MICROPY_NLR_SETJMP                  (1)
@@ -199,10 +203,6 @@
 #define MICROPY_PY_USOCKET_EVENTS           (MICROPY_PY_WEBREPL)
 #define MICROPY_PY_BLUETOOTH_RANDOM_ADDR    (1)
 #define MICROPY_PY_BLUETOOTH_DEFAULT_GAP_NAME ("ESP32")
-
-// kdmukai custom firmware
-#define MODULE_SECP256K1_ENABLED (1)
-#define MODULE_HASHLIB_ENABLED (1)
 
 // fatfs configuration
 #define MICROPY_FATFS_ENABLE_LFN            (1)
